@@ -4,8 +4,6 @@ import App from './App.vue'
 import Keycloak from "keycloak-js";
 import axios from "axios";
 
-var host=process.env.VUE_APP_HOST;
-console.log(host);
 Vue.component("")
 let initOptions = {
   url: 'http://localhost:8080/', realm: 'kbe-api', clientId: 'app-vue', onLoad: 'login-required'
@@ -22,7 +20,6 @@ keycloak.init({ onLoad: initOptions.onLoad }).then((auth) => {
       el: '#app',
       render: h => h(App, {props: { keycloak: keycloak } })
     }).$mount("#app")
-    console.log("######################"+host);
     localStorage.setItem("vue-token",keycloak.token);
     localStorage.setItem("vue-refresh-token",keycloak.refreshToken);
  }

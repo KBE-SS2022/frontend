@@ -136,6 +136,13 @@ table, th, td {
   border: 1px solid black;
   padding: 5px;
 }
+Button {
+  border-color: rgb(74, 107, 78);
+  background-color: rgb(91, 255, 110);
+  align-content: center;
+  margin: auto;
+}
+
 
 #pizzaTr td{background-color: #f53e3e}
 

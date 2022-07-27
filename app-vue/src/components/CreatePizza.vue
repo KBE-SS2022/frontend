@@ -5,7 +5,7 @@
       <label for="PizzaNameInput">PizzaName:</label>
       <input v-model="pizzaName" type="text" id="PizzaNameInput">
       <label  >Select Ingredients:</label>
-      <select  class="dropDown" @change="onChange($event)" v-model="ingredients.name">
+      <select  class="ingredientsDropDown" @change="onChange($event)" v-model="ingredients.name">
         <option :value="ingredient.name" v-for="(ingredient) in ingredients" :key="ingredient.code">
           {{ ingredient.name }}
         </option>
@@ -143,15 +143,8 @@ export default {
 
 <style scoped>
 
-#{
-  background-color: rgb(91, 255, 110);
-  border-color: rgb(42, 126, 52);
-}
-#logout {
-  border-color: rgb(74, 107, 78);
-  background-color: rgb(91, 255, 110);
-  align-content: center;
-}
+
+
 
 #pizzaWrapper {
   align-content: center;
@@ -175,12 +168,16 @@ export default {
 
 }
 
-Button,VSelect {
+Button {
   border-color: rgb(74, 107, 78);
   background-color: rgb(91, 255, 110);
   align-content: center;
   margin: auto;
 
+}
+.ingredientsDropDown {
+  background-color: rgb(91, 255, 110);
+  border-color: rgb(42, 126, 52);
 }
 
 .form-group {
