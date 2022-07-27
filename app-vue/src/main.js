@@ -6,7 +6,7 @@ import axios from "axios";
 
 Vue.component("")
 let initOptions = {
-  url: 'http://localhost:8080/', realm: 'kbe-api', clientId: 'app-vue', onLoad: 'login-required'
+  url: 'http://localhost:8080/auth/', realm: 'kbe-api', clientId: 'app-vue', onLoad: 'login-required'
 }
 let keycloak = Keycloak(initOptions);
 

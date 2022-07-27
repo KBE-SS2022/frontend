@@ -90,7 +90,7 @@ export default {
     async loadPizzas(currency) {
       this.currency=currency
       var tokenStr = localStorage.getItem('vue-token')
-      var url = 'http://localhost:8090/hello/pizzas/'+this.currency;
+      var url = 'http://localhost:8090/pizzas/'+this.currency;
       var response = await axios.get(url, {headers: {"Authorization": `Bearer ${tokenStr}`}})
 
       if(response.status==200){
