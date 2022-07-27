@@ -75,7 +75,7 @@ export default {
     async loadIngredients(currency) {
       this.currency=currency;
       var tokenStr = localStorage.getItem('vue-token')
-      var url = 'http://localhost:8090/hello/ingredients/'+this.currency;
+      var url = 'http://localhost:8090/ingredients/'+this.currency;
       await axios.get(url, {headers: {"Authorization": `Bearer ${tokenStr}`}}).then((response) => {
         if (response.status == 200) {
           this.ingredients = response.data;
@@ -117,7 +117,7 @@ export default {
         ingredientIdToPrice: obj
       });
 
-      var url = 'http://localhost:8090/hello/createPizza/'+this.currency;
+      var url = 'http://localhost:8090/createPizza/';
       var tokenStr = localStorage.getItem('vue-token');
       await axios.post(url, data, {
         headers: {

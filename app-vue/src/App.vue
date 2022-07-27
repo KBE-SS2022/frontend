@@ -104,7 +104,7 @@ export default {
     async fetchAllData() {
       var response
       var tokenStr = localStorage.getItem('vue-token')
-      var url = 'http://localhost:8090/hello/ingredients/'+this.currency
+      var url = 'http://localhost:8090/ingredients/'+this.currency
       response = await axios.get(url, {headers: {"Authorization": `Bearer ${tokenStr}`}}).then((response) => {
         console.log(response);
         if (response.status == 200) {
