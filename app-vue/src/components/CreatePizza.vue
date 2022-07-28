@@ -125,7 +125,7 @@ export default {
           "content-type": "application/json"
         }
       }).then((response) => {
-        if (response.status == 200) {
+        if (response.status == 201) {
           alert("Pizza has been created");
           this.$parent.fetchAllData();
         } else {

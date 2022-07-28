@@ -17,7 +17,9 @@
             <select @change="changeCurrency($event)" class="currencySelector" id="currency">
               <option value="EUR">Euro</option>
               <option value="USD">Dollar</option>
-              <option value="GBP">Yen</option>
+              <option value="GBP">GBP</option>
+              <option value="RUB">RUB</option>
+              <option value="CHF">CHF</option>
             </select>
           </li>
         </ul>
